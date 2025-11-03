@@ -1,7 +1,10 @@
 
 import React, { useState } from "react";
+import useBlog from "../store/useblog";
 
-const Dashboard = ({ blogs }) => {
+const Dashboard = () => {
+  const blogs= useBlog ((state) => state.blogs);
+  const removeBlog = useBlog((state) => state.removeBlog);
 
 
   return (
@@ -24,7 +27,9 @@ const Dashboard = ({ blogs }) => {
                 />
                 <h3 className="text-lg font-semibold text-gray-800">{blog.title}</h3>
                 <p className="text-sm text-gray-600 mt-1">{blog.description}</p>
-                <span className="block text-xs text-gray-400 mt-2">ID: {blog.id}</span>
+                <button className="w-30 h-10 bg-blue-500 text-white rounded-3xl mt-3 font-medium"
+                onClick={()=>removeBlog(blog.id)}>Delete</button>
+
               </div>
             ))}
           </div>

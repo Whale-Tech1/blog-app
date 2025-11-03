@@ -6,7 +6,7 @@ export default function Sidebar({ setPage }) {
   ];
   return (
     <aside className="w-64 bg-white shadow-md p-4">
-      <h2 className="text-x2 font-bold mb-6">My Blog</h2>
+      <h2 className="text-x3 sm:text-4xl font-bold mb-6">My Blog</h2>
       <nav className="space-y-2">
         {menu.map((item) => (
           <a

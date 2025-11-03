@@ -1,4 +1,4 @@
-import BlogCard from "./BlogCard.jsx ";
+import BlogCard from "./Blogcard.jsx ";
 
 export default function BlogList({ posts }) {
   return (
